@@ -3,15 +3,15 @@ import Navbar from './components/Navbar'
 import TextForm from './components/TextForm'
 import React, {useState} from 'react';
 import Alert from './components/Alert';
-import About from './components/About';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams
-} from "react-router-dom";
+// import About from './components/About';
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   Link,
+//   useRouteMatch,
+//   useParams
+// } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState('light')
@@ -43,7 +43,7 @@ function App() {
   }
   return (
     <>
-    <Router>
+    {/* <Router>
       <Navbar title="TextUtils" aboutText="About" mode={mode} toggleMode={toggleMode}/>
       <Alert alert={alert} />
       <Routes>
@@ -52,7 +52,10 @@ function App() {
           <Route path="/" element={<TextForm title="Enter your text" showAlert={showAlert} mode={mode} />}>
           </Route>
       </Routes>
-    </Router>
+    </Router> */}
+    <Navbar title="TextUtils" aboutText="About" mode={mode} toggleMode={toggleMode}/>
+    <Alert alert={alert} />
+    <TextForm title="Enter your text" showAlert={showAlert} mode={mode} />
     </>
   )
 }
